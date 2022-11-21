@@ -1,0 +1,81 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 20px 30px;
+    border: 1px solid #E9ECEF;
+    border-radius: 4px;
+    width: 90%;
+}
+form > button {
+    width: 60%;
+    height: 48px;
+    background: #FD377E;
+    border: 2px solid #FD377E;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+form > button:hover {
+    background-color: #e34981;
+    transition: 0,3s;
+}
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.description input {
+    width: 90%;
+    height: 52px;
+    max-width: 100%;
+    background: #F8F9FA;
+    border: 2px solid #E9ECEF;
+    border-radius: 8px;
+    padding: 0 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #868E96;
+}
+.value-select {
+    display: flex;
+    width: 100%;
+}
+.value {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.value input {
+    width: 90%;
+    height: 48px;
+    background: #F8F9FA;
+    border: 2px solid #E9ECEF;
+    border-radius: 8px;
+}
+.select {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.select select {
+    width: 100%;
+    height: 48px;
+    background: #F8F9FA;
+    border: 2px solid #E9ECEF;
+    border-radius: 8px;
+}
+@media(min-width: 792px) {
+    form {
+        width: 363px;
+        margin-top: 0;
+        height: 351px;
+        gap: 30px;
+        min-width: 300px;
+    }
+}

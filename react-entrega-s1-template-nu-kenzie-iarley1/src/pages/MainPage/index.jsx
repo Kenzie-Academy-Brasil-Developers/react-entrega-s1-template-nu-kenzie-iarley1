@@ -1,15 +1,26 @@
 import { FilterList } from "../../components/Filter"
 import { Form } from "../../components/Form"
+import { Header } from "../../components/Header"
 import { List } from "../../components/List"
+import './index.css'
 
 export function MainPage ({listTransactions, setPage, addTransaction, typeList, deleteTransaction, setFilter}) {
     return (
-        <div>
-            <h1>Pagina de usuario</h1>
-            <button onClick={() => setPage(false)}>Inicio</button>
-            <Form addTransaction={addTransaction} typeList={typeList} setFilter={setFilter}/>
-            <List listTransactions={listTransactions} deleteTransaction={deleteTransaction}/>
-            <FilterList typeList={typeList} setFilter={setFilter}/>
+        <div className="main-page-body">
+            <div className="container">
+               <Header setPage={setPage}/>
+               <div className="box-container">
+                  <Form addTransaction={addTransaction} typeList={typeList} setFilter={setFilter}/>
+                  
+                  <div className="box-list">
+                    <div className="financial-summary">
+                       <h3>Resumo Financeiro</h3>
+                       <FilterList typeList={typeList} setFilter={setFilter}/>
+                    </div>
+                    <List listTransactions={listTransactions} deleteTransaction={deleteTransaction}/>
+                  </div>
+                </div>
+            </div>
         </div>
     )
 }

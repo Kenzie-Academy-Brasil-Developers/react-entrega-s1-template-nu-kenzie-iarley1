@@ -16,14 +16,14 @@ const types = [
 ]
 
 function App() {
-  const [page, setPage] = useState(true)
+  const [page, setPage] = useState(false)
   const [listTransactions, setListTransactions] = useState(obj)
   const [typeList, setTypeList] = useState(types)
   const [filter, setFilter] = useState('todos')
 
   const filteredTransactionsList = listTransactions.filter(transaction => filter == 'todos' ? true : transaction.type == filter)
 
-  function addTransaction (obj, type) {
+  function addTransaction (obj) {
     setListTransactions([...listTransactions, obj])
   }
 

@@ -1,7 +1,8 @@
+import './index.css'
+
 export function FilterList ({typeList, setFilter}) {
-    console.log(typeList)
     return (
-        <ul>
+        <ul className="list-button-filter">
             <li onClick={() => setFilter('todos')}>
                 Todos
             </li>
