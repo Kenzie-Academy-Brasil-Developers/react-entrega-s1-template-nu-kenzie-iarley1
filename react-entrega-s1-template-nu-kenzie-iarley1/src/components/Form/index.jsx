@@ -6,6 +6,7 @@ export function Form ({addTransaction, typeList}) {
         description: '',
         value: '',
         type: typeList[0].value,
+        id: ''
     })
     
     return (
@@ -20,7 +21,9 @@ export function Form ({addTransaction, typeList}) {
         }}>
             <div className="description">
                <label htmlFor="description">Descrição</label>
-               <input value={formObj.description} onChange={(event) => setFormObj({...formObj, description: event.target.value})} name="description" type="text" placeholder="Digite aqui sua descrição"/>
+               <input value={formObj.description} onChange={(event) => {
+                return setFormObj({...formObj, description: event.target.value})
+               }} name="description" type="text" placeholder="Digite aqui sua descrição"/>
                <span>Ex: Compra de roupas</span>
             </div>
             <div className="value-select">
@@ -38,6 +41,8 @@ export function Form ({addTransaction, typeList}) {
                </div>
             </div>
             <button type="submit">Inserir valor</button>
+            
         </form>
     )
+    
 }

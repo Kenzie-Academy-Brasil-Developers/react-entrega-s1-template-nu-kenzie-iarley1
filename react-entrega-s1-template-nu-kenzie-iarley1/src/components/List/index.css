@@ -1,8 +1,12 @@
 .list-transactions {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
     margin-top: 20px;
     width: 100%;
+}
+.list-transactions h2 {
+    font-size: 20px;
+    padding: 0 10px;
 }

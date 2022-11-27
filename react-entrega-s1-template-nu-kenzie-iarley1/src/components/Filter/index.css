@@ -5,7 +5,7 @@
     margin-top: 20px;
     max-width: 100%;
 }
-.list-button-filter li {
+.button {
     height: 40px;
     background: #E9ECEF;
     border: 1.4px solid #E9ECEF;
@@ -13,4 +13,8 @@
     border-radius: 8px;
     text-align: center;
     cursor: pointer;
+}
+.selected {
+    background-color: #fd377e;
+    color: #ffffff;
 }

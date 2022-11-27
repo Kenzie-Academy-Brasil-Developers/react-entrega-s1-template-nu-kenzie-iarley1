@@ -33,7 +33,7 @@ header div > button:hover {
 header div h1 > span {
     color: #fd377e;
 }
-@media(min-width: 792px) {
+@media(min-width: 931px) {
     header {
         width: 100%;
         padding: 0;

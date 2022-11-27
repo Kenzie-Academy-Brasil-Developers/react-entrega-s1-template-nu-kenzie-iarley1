@@ -1,4 +1,3 @@
-import { Header } from '../../components/Header'
 import './index.css'
 import   illustration  from '../../asserts/img/illustration.svg'
 

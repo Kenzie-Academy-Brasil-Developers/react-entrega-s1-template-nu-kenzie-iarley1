@@ -11,6 +11,9 @@
 .box-list div > h3 {
     text-align: center;
 }
+.form-total-money {
+    width: 100%;
+}
 .box-list {
     display: flex;
     flex-direction: column;
@@ -18,10 +21,13 @@
     width: 100%;
     margin-top: 20px;
 }
-@media(min-width: 792px) {
+@media(min-width: 931px) {
     .main-page-body {
         display: flex;
         justify-content: center;
+    }
+    .form-total-money {
+        width: 363px;
     }
     .container {
         width: 1000px;

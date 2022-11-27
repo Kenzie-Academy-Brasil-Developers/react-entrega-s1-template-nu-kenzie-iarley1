@@ -2,6 +2,7 @@ import { FilterList } from "../../components/Filter"
 import { Form } from "../../components/Form"
 import { Header } from "../../components/Header"
 import { List } from "../../components/List"
+import { TotalMoney } from "../../components/TotalMoney"
 import './index.css'
 
 export function MainPage ({listTransactions, setPage, addTransaction, typeList, deleteTransaction, setFilter}) {
@@ -10,8 +11,10 @@ export function MainPage ({listTransactions, setPage, addTransaction, typeList, 
             <div className="container">
                <Header setPage={setPage}/>
                <div className="box-container">
-                  <Form addTransaction={addTransaction} typeList={typeList} setFilter={setFilter}/>
-                  
+                  <div className="form-total-money">
+                     <Form addTransaction={addTransaction} typeList={typeList} />
+                     <TotalMoney listTransactions={listTransactions}/>
+                  </div>
                   <div className="box-list">
                     <div className="financial-summary">
                        <h3>Resumo Financeiro</h3>

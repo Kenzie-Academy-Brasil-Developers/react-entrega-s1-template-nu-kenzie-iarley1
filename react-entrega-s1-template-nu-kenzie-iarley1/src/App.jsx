@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react'
 import { HomePage } from './pages/HomePage';
-import { MainPage } from './pages/MainPage';
+import { MainPage } from './pages/LandingPage';
 
 const obj = []
 const types = [
@@ -23,19 +23,24 @@ function App() {
 
   const filteredTransactionsList = listTransactions.filter(transaction => filter == 'todos' ? true : transaction.type == filter)
 
+  function sumTransactionValue (listTransactions) {
+    setListTransactions(listTransactions)
+  }
+
+
   function addTransaction (obj) {
     setListTransactions([...listTransactions, obj])
   }
 
-  function deleteTransaction (transactionDescription) {
-    const list = listTransactions.filter(transaction => transaction.description !== transactionDescription)
+  function deleteTransaction (transactionId) {
+    const list = listTransactions.filter(transaction => transaction.id !== transactionId)
     setListTransactions(list)
   }
 
   return (
     <div className="App">
       {page ? (
-        <MainPage listTransactions={filteredTransactionsList} setPage={setPage} addTransaction={addTransaction} typeList={typeList} deleteTransaction={deleteTransaction} setFilter={setFilter}/>
+        <MainPage listTransactions={filteredTransactionsList} setPage={setPage} addTransaction={addTransaction} typeList={typeList} deleteTransaction={deleteTransaction} setFilter={setFilter} sumTransactionValue={listTransactions}/>
       ) : (
         <HomePage setPage={setPage}/>
       )}
