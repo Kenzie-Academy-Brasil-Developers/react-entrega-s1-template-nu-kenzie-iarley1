@@ -29,7 +29,7 @@ export function Form ({addTransaction, typeList}) {
             <div className="value-select">
                <div className="value">
                   <label htmlFor="value">Valor</label>
-                  <input value={formObj.value} onChange={(event) => setFormObj({...formObj, value: event.target.value})} name="value" type="text" placeholder="1"/>
+                  <input type="number" value={formObj.value} onChange={(event) => setFormObj({...formObj, value: event.target.value})} name="value" placeholder="1"/>
                </div>
                <div className="select">
                   <label htmlFor="type">Tipo de valor</label>
